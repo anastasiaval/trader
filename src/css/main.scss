@@ -4,3 +4,103 @@
   box-sizing: border-box;
 }
 
+body {
+  //background: url("../img/bg-mobile.jpg") no-repeat;
+  background: #f3f2da;
+  min-width: 300px;
+}
+
+.interest {
+  &__heading {
+    font-family: PFDinTextPro-Light, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    color: #171717;
+    font-weight: 300;
+    margin-top: 44px;
+  }
+  &__btn {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    align-items: center;
+    padding: 20px 10px 20px 20px;
+    position: relative;
+    margin: 18px 24px;
+  }
+  &__opt-heading {
+    font-family: PFDinTextPro-Regular, sans-serif;
+    color: #2b2b2b;
+    font-size: 19px;
+    margin: 0 20px;
+  }
+  &__arrow {
+    width: 19px;
+    height: 12px;
+    position: absolute;
+    top: 31px;
+    right: 15px;
+    background: url("../img/arrow-down.png") no-repeat 0 0;
+  }
+  &__text {
+    &_sum {
+      color: #1c1c1c;
+      font-size: 16px;
+    }
+    &_heading {
+      font-size: 24px;
+      color: #171717;
+      padding: 30px 0;
+    }
+  }
+  &__desc {
+    padding: 0 30px 271px 30px;
+    font-family: PFDinTextPro-Light, sans-serif;
+    position: relative;
+  }
+  &__action {
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    color: #feffff;
+    background: #009e82;
+    font-family: PFDinTextPro-Medium, sans-serif;
+    font-size: 18px;
+    padding: 14px 26px;
+  }
+}
+
+.ol-list {
+  list-style: none;
+  counter-reset: my-counter;
+  margin-bottom: 23px;
+  padding: 0 4px 0 32px;
+  &__item {
+    counter-increment: my-counter;
+    position: relative;
+    color: #1d1d1d;
+    margin-bottom: 10px;
+    &::before {
+      content: counter(my-counter) '';
+      color: #00b596;
+      font-size: 32px;
+      position: absolute;
+      top: -7px;
+      left: -32px;
+    }
+  }
+}
+
+.bg-mob {
+  display: block;
+  width: 376px;
+  height: 351px;
+  background-image: linear-gradient(to bottom, #f3f2da 0%, transparent 40%),
+    url('../img/photo-mob.jpg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 496px;
+  left: 0;
+  z-index: -1;
+}
+
