@@ -59,6 +59,7 @@ body {
     font-family: PFDinTextPro-Light, sans-serif;
     position: relative;
     display: none;
+    margin-bottom: 18px;
   }
   &__action {
     border: 0;
@@ -71,12 +72,15 @@ body {
     padding: 14px 26px;
     margin-top: 23px;
   }
+  &__nav {
+    display: none;
+  }
 }
 
 .ol-list {
   list-style: none;
   counter-reset: my-counter;
-  padding: 0 4px 0 32px;
+  padding: 0 4px 1px 32px;
   &__item {
     counter-increment: my-counter;
     position: relative;
@@ -98,16 +102,144 @@ body {
 }
 
 .bg-mob {
-  display: block;
   width: 376px;
   height: 351px;
-  background-image: linear-gradient(to bottom, #f3f2da 0%, transparent 40%),
-    url('../img/photo-mob.jpg');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../img/photo-mob.jpg');
   position: absolute;
   top: 496px;
   left: 0;
   z-index: -1;
+}
+
+@media (min-width: 377px) {
+  body {
+    background: #f3f2da;
+  }
+  .bg-mob {
+    background: none;
+  }
+  .bg-mob-div {
+    padding: 0;
+  }
+  .ol-list__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 540px) {
+  body {
+    background: url("../img/bg.jpg") no-repeat;
+    background-size: 100%;
+  }
+  .interest {
+    &__options {
+      display: none;
+    }
+    &__heading {
+      padding: 0 60px;
+      margin-bottom: 4%;
+    }
+    &__nav {
+      display: flex;
+      justify-content: center;
+    }
+    &__nav-item {
+      list-style-type: none;
+      margin: 0 15px;
+      text-align: center;
+      width: 140px;
+      height: 140px;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+    }
+    &__nav-link {
+      display: block;
+      text-decoration: none;
+      color: #242424;
+      border: 1px solid transparent;
+      width: inherit;
+      height: inherit;
+      font-size: 18px;
+      padding: 75px 5px 0;
+      font-family: PFDinTextPro-Light, sans-serif;
+      border-radius: 50%;
+      &:hover {
+        border: 1px solid #00b0a2;
+      }
+      &_trade {
+        background: url("../img/trade-mob.png") no-repeat top 32px center;
+      }
+      &_invest {
+        background: url("../img/invest-mob.png") no-repeat top 30px center;
+      }
+      &_pamm {
+        background: url("../img/pamm-mob.png") no-repeat top 25px center;
+      }
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  .interest {
+    &__heading {
+      font-size: 48px;
+      margin-top: 7%;
+    }
+    &__nav-item {
+      width: 200px;
+      height: 200px;
+    }
+    &__nav-link {
+      font-size: 20px;
+      padding: 125px 5px 0;
+      &_trade {
+        background: url("../img/trade.png") no-repeat top 40px center;
+      }
+      &_invest {
+        background: url("../img/invest.png") no-repeat top 35px center;
+      }
+      &_pamm {
+        background: url("../img/pamm.png") no-repeat top 25px center;
+      }
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  .interest {
+    &__nav-item {
+      width: 365px;
+      height: 365px;
+      padding: 9px;
+      margin: 0 26px;
+    }
+    &__nav-link {
+      width: 348px;
+      height: 348px;
+      font-size: 28px;
+      padding: 196px 0 116px;
+      &_trade {
+        background-position: top 99px center;
+      }
+      &_invest {
+        background-position: top 94px center;
+      }
+      &_pamm {
+        background-position: top 77px center;
+      }
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+  .interest {
+    &__heading {
+      margin-top: 13.5%;
+      margin-right: 22px;
+    }
+    &__nav {
+      margin-right: 13px;
+    }
+  }
 }
 
