@@ -6,6 +6,7 @@
 
 body {
   background: url("../img/bg-mobile.jpg") no-repeat;
+  background-size: 100%;
   min-width: 300px;
 }
 
@@ -16,21 +17,44 @@ body {
     text-align: center;
     color: #171717;
     font-weight: 300;
-    margin-top: 44px;
+    margin-top: 38px;
+    margin-right: 10px;
+    padding: 0 40px;
+  }
+  &__options {
+    margin-top: 22px;
   }
   &__btn {
     background-color: rgba(255, 255, 255, 0.6);
     display: flex;
     align-items: center;
-    padding: 20px 10px 20px 20px;
+    padding: 22px 20px;
     position: relative;
-    margin: 18px 24px;
+    margin: 0 18px 13px;
+  }
+  &__img-mob_trade {
+    position: absolute;
+    background: url("../img/trade-mob.png") no-repeat 0 0;
+    width: 35px;
+    height: 28px;
+  }
+  &__img-mob_invest {
+    position: absolute;
+    background: url("../img/invest-mob.png") no-repeat 0 0;
+    width: 34px;
+    height: 36px;
+  }
+  &__img-mob_pamm {
+    position: absolute;
+    background: url("../img/pamm-mob.png") no-repeat 2px 0;
+    width: 32px;
+    height: 36px;
   }
   &__opt-heading {
     font-family: PFDinTextPro-Regular, sans-serif;
     color: #2b2b2b;
     font-size: 19px;
-    margin: 0 20px;
+    margin-left: 52px;
   }
   &__arrow {
     width: 19px;
@@ -52,14 +76,17 @@ body {
       font-size: 24px;
       color: #171717;
       padding: 30px 0;
+      margin-left: 2px;
+      margin-right: 2px;
     }
   }
   &__desc {
-    padding: 0 30px 0 30px;
+    padding: 5px 30px 0 30px;
+    line-height: 20px;
     font-family: PFDinTextPro-Light, sans-serif;
     position: relative;
     display: none;
-    margin-bottom: 18px;
+    margin-bottom: 24px;
   }
   &__action {
     border: 0;
@@ -69,8 +96,8 @@ body {
     background: #009e82;
     font-family: PFDinTextPro-Medium, sans-serif;
     font-size: 18px;
-    padding: 14px 26px;
-    margin-top: 23px;
+    padding: 12px 26px;
+    margin-top: 9px;
   }
   &__nav {
     display: none;
@@ -86,12 +113,13 @@ body {
     position: relative;
     color: #1d1d1d;
     margin-bottom: 10px;
+    line-height: 19px;
     &::before {
       content: counter(my-counter) '';
       color: #00b596;
       font-size: 32px;
       position: absolute;
-      top: -7px;
+      top: 5px;
       left: -32px;
     }
   }
@@ -106,15 +134,12 @@ body {
   height: 351px;
   background-image: url('../img/photo-mob.jpg');
   position: absolute;
-  top: 496px;
+  top: 506px;
   left: 0;
   z-index: -1;
 }
 
 @media (min-width: 377px) {
-  body {
-    background: #f3f2da;
-  }
   .bg-mob {
     background: none;
   }
@@ -136,7 +161,6 @@ body {
       display: none;
     }
     &__heading {
-      padding: 0 60px;
       margin-bottom: 4%;
     }
     &__nav {
