@@ -21,7 +21,7 @@ body {
     margin-right: 10px;
     padding: 0 40px;
   }
-  &__options {
+  &__options-mob {
     margin-top: 22px;
   }
   &__btn {
@@ -102,6 +102,9 @@ body {
   &__nav {
     display: none;
   }
+  &__tabs {
+    display: none;
+  }
 }
 
 .ol-list {
@@ -157,7 +160,7 @@ body {
     background-size: 100%;
   }
   .interest {
-    &__options {
+    &__options-mob {
       display: none;
     }
     &__heading {
@@ -200,6 +203,48 @@ body {
         background: url("../img/pamm-mob.png") no-repeat top 25px center;
       }
     }
+    &__tabs {
+      display: block;
+      margin-top: 5%;
+      background: url("../img/photo-bg.jpg") no-repeat;
+      background-size: cover;
+    }
+    &__tabs-list {
+      display: flex;
+      justify-content: space-between;
+      padding: 4% 6% 0;
+    }
+    &__tabs-li {
+      list-style-type: none;
+      font-family: PFDinTextPro-Light, sans-serif;
+      font-size: 18px;
+      color: rgba(46, 46, 46, 0.8);
+      padding: 0 3% 4%;
+      margin-bottom: -2px;
+    }
+    &__tabs-li.active {
+      color: #009e82;
+      font-family: PFDinTextPro-Regular, sans-serif;
+      border-bottom: 3px solid #00978a;
+    }
+    &__tabs-content {
+      display: none;
+    }
+    &__tabs-content.active {
+      display: block;
+      border-top: 1px solid rgba(181, 181, 181, 0.75);
+      padding: 6% 32% 6% 6%;
+      font-family: PFDinTextPro-Light, sans-serif;
+    }
+    &__tabs-sum {
+      color: #1c1c1c;
+      font-size: 16px;
+    }
+    &__tabs-heading {
+      color: #171717;
+      font-size: 20px;
+      padding: 5% 0;
+    }
   }
 }
 
@@ -225,6 +270,9 @@ body {
       &_pamm {
         background: url("../img/pamm.png") no-repeat top 25px center;
       }
+    }
+    &__tabs {
+      margin-top: 4%;
     }
   }
 }
@@ -263,6 +311,68 @@ body {
     }
     &__nav {
       margin-right: 13px;
+    }
+    &__tabs {
+      margin-top: 11%;
+      padding-bottom: 66px;
+      background-position: -3px -23px;
+    }
+    &__tabs-sum {
+      line-height: 24px;
+      font-size: 18px;
+    }
+    &__tabs-heading {
+      font-size: 24px;
+      padding-top: 40px;
+    }
+    &__tabs-list {
+      padding: 41px 350px 0;
+    }
+    &__tabs-li {
+      font-size: 28px;
+      padding: 0 104px 41px;
+    }
+    &__tabs-content.active {
+      padding: 81px 45% 20px 350px;
+      position: relative;
+    }
+    &__action {
+      margin-top: 27px;
+      padding: 12px 28px;
+    }
+  }
+  .ol-list__item {
+    line-height: 24px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    &::before {
+      top: 0;
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .interest {
+    &__video-link {
+      text-decoration: none;
+      position: absolute;
+      top: 228px;
+      right: 425px;
+      height: 99px;
+      width: 99px;
+      background: rgba(177, 177, 177, 0.2);
+      border-radius: 50%;
+      cursor: pointer;
+      &::before {
+        content: '';
+        position: inherit;
+        top: 18px;
+        left: 34px;
+        color: #00b0a2;
+        background: url("../img/video-arrow.png") no-repeat 0 0;
+        opacity: 0.8;
+        padding: 30px 22px;
+      }
     }
   }
 }

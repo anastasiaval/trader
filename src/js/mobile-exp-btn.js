@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 $(function () {
     let $expBtn = $('.interest__btn');
     $expBtn.on('click', e => {
@@ -15,7 +13,7 @@ $(function () {
         let $body = $('body');
         $expBtn.hasClass('expanded')
             ? $body.css('background', '#f3f2da')
-            : $body.css('background', 'url("../img/bg-mobile.jpg") no-repeat');
+            : $body.css('background', 'url("img/bg-mobile.jpg") no-repeat');
     });
 });
 
