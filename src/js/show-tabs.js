@@ -4,6 +4,9 @@ $(function () {
             $('.interest__slide-up').fadeOut(800);
             $('.interest__tabs').fadeIn(800);
         });
+        let ind = $(e.target).closest('li').index();
+        $('.interest__tabs-li').eq(ind).addClass('active');
+        $('.interest__tabs-content').eq(ind).addClass('active');
     });
 });
 

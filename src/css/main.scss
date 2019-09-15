@@ -6,7 +6,7 @@
 
 body {
   background: url("../img/bg-mobile.jpg") no-repeat;
-  background-size: 100%;
+  background-size: cover;
   min-width: 300px;
 }
 
@@ -192,7 +192,6 @@ html, body {
     }
     &__nav-link {
       display: block;
-      text-decoration: none;
       color: #242424;
       border: 1px solid transparent;
       width: inherit;
@@ -201,6 +200,7 @@ html, body {
       padding: 75px 5px 0;
       font-family: PFDinTextPro-Light, sans-serif;
       border-radius: 50%;
+      cursor: pointer;
       &:hover {
         border: 1px solid #00b0a2;
       }
@@ -233,6 +233,7 @@ html, body {
       padding-bottom: 4%;
       width: 170px;
       margin-bottom: -2px;
+      cursor: pointer;
     }
     &__tabs-li.active {
       color: #009e82;
