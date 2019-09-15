@@ -20,7 +20,10 @@ $(function () {
         let $body = $('body');
         $expBtn.hasClass('expanded')
             ? $body.css('background', '#f3f2da')
-            : $body.css('background', 'url("img/bg-mobile.jpg") no-repeat');
+            : $body.css({
+                'background': 'url("img/bg-mobile.jpg") no-repeat',
+                'background-size': '100%'
+            });
     });
 
     $(document).mouseup(e => {
@@ -30,10 +33,14 @@ $(function () {
             && $expBtn.has(e.target).length === 0
             && !$desc.is(e.target)
             && $desc.has(e.target).length === 0
+            && document.body.clientWidth < 540
         ) {
             $expBtn.find('.interest__arrow').removeClass('interest__arrow_up');
             $desc.slideUp(500);
-            $('body').css('background', 'url("img/bg-mobile.jpg") no-repeat');
+            $('body').css({
+                'background': 'url("img/bg-mobile.jpg") no-repeat',
+                'background-size': '100%'
+            });
         }
 
     });
