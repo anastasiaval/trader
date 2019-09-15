@@ -10,6 +10,10 @@ body {
   min-width: 300px;
 }
 
+html, body {
+  height: 100vh;
+}
+
 .interest {
   &__heading {
     font-family: PFDinTextPro-Light, sans-serif;
@@ -157,9 +161,16 @@ body {
 @media (min-width: 540px) {
   body {
     background: url("../img/bg.jpg") no-repeat;
-    background-size: 100%;
+    background-size: cover;
   }
   .interest {
+    &__slide-up {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%);
+      width: 100%;
+    }
     &__options-mob {
       display: none;
     }
@@ -204,22 +215,23 @@ body {
       }
     }
     &__tabs {
-      display: block;
-      margin-top: 5%;
+      display: none;
+      padding-top: 5%;
       background: url("../img/photo-bg.jpg") no-repeat;
       background-size: cover;
+      height: 100vh;
     }
     &__tabs-list {
       display: flex;
-      justify-content: space-between;
-      padding: 4% 6% 0;
+      text-align: center;
     }
     &__tabs-li {
       list-style-type: none;
       font-family: PFDinTextPro-Light, sans-serif;
       font-size: 18px;
       color: rgba(46, 46, 46, 0.8);
-      padding: 0 3% 4%;
+      padding-bottom: 4%;
+      width: 170px;
       margin-bottom: -2px;
     }
     &__tabs-li.active {
@@ -271,8 +283,12 @@ body {
         background: url("../img/pamm.png") no-repeat top 25px center;
       }
     }
-    &__tabs {
-      margin-top: 4%;
+    &__tabs-list {
+      justify-content: space-evenly;
+    }
+    &__tabs-li {
+      margin: 0 15px -2px;
+      width: 180px;
     }
   }
 }
@@ -300,6 +316,13 @@ body {
         background-position: top 77px center;
       }
     }
+    &__tabs {
+      padding-top: 3%;
+    }
+    &__tabs-li {
+      width: 365px;
+      padding-bottom: 41px;
+    }
   }
 }
 
@@ -313,9 +336,7 @@ body {
       margin-right: 13px;
     }
     &__tabs {
-      margin-top: 11%;
-      padding-bottom: 66px;
-      background-position: -3px -23px;
+      padding-top: 0;
     }
     &__tabs-sum {
       line-height: 24px;
@@ -326,11 +347,10 @@ body {
       padding-top: 40px;
     }
     &__tabs-list {
-      padding: 41px 350px 0;
+      padding: 34px 350px 0;
     }
     &__tabs-li {
       font-size: 28px;
-      padding: 0 104px 41px;
     }
     &__tabs-content.active {
       padding: 81px 45% 20px 350px;
@@ -356,8 +376,8 @@ body {
     &__video-link {
       text-decoration: none;
       position: absolute;
-      top: 228px;
-      right: 425px;
+      top: 45%;
+      right: 13%;
       height: 99px;
       width: 99px;
       background: rgba(177, 177, 177, 0.2);

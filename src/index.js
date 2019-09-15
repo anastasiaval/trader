@@ -4,4 +4,5 @@ import './css/fonts.scss';
 import $ from "jquery";
 import './js/mobile-exp-btn';
 import './js/tabs';
+import './js/show-tabs';
 
