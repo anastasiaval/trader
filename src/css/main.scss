@@ -218,7 +218,7 @@ body {
       padding-top: 5%;
       background: url("../img/photo-bg.jpg") no-repeat;
       background-size: cover;
-      height: 100vh;
+      //height: 100vh;
     }
     &__tabs-list {
       display: flex;
@@ -318,6 +318,7 @@ body {
     }
     &__tabs {
       padding-top: 3%;
+      height: 100vh;
     }
     &__tabs-li {
       width: 365px;
