@@ -10,10 +10,6 @@ body {
   min-width: 300px;
 }
 
-html, body {
-  height: 100vh;
-}
-
 .interest {
   &__heading {
     font-family: PFDinTextPro-Light, sans-serif;
@@ -159,6 +155,9 @@ html, body {
 }
 
 @media (min-width: 540px) {
+  html, body {
+    height: 100vh;
+  }
   body {
     background: url("../img/bg.jpg") no-repeat;
     background-size: cover;
